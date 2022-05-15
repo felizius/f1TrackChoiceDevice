@@ -38,7 +38,7 @@ function ban(e) {
     $('img[title=\'' + e.target.title + '\']').addClass('grey');
     tracks = tracks.filter(x => x != e.target.title);
     console.log(tracks.length);
-    if(tracks.length <= players.length) {
+    if(tracks.length <= players.length || tracks.length <= +$('#trackCount').val()) {
         state = 2;
         $('#ziehen').prop('disabled', false);
         $('#meldung').text('Die Ziehung kann gestartet werden');
