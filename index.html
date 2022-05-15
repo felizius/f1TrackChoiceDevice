@@ -7,24 +7,93 @@
     img {
       cursor: pointer;
     }
+
     body {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      width: 700;
+      width: 600;
     }
+
     .grey {
       opacity: 0.2;
     }
+
     textarea {
       height: 100;
     }
+
+    button {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
     #reset {
-     width: 50px;
-     margin-top: 10px;
-     margin-right: 100px;
-     position:relative;
-     top:0;
-     right:0;
- }
+      width: 50px;
+      margin-top: 10px;
+      margin-right: 100px;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+
+    .row {
+      display: flex;
+      /* flex-direction: column;*/
+      align-items: center;
+    }
+
+    div.block {
+      display: inline;
+      /* flex-direction: column;*/
+      align-items: center;
+      width: 200px;
+      line-height: 100;
+    }
+
+    .track-label {
+      bottom: 20px;
+      left: 10px;
+      position: relative;
+    }
+
+    /* DivTable.com */
+    .divTable {
+      display: table;
+      width: 100%;
+    }
+
+    .divTableRow {
+      display: table-row;
+    }
+
+    .divTableHeading {
+      background-color: #EEE;
+      display: table-header-group;
+    }
+
+    .divTableCell,
+    .divTableHead {
+      border: 0px solid #999999;
+      display: table-cell;
+      padding: 3px 10px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .divTableHeading {
+      background-color: #EEE;
+      display: table-header-group;
+      font-weight: bold;
+    }
+
+    .divTableFoot {
+      background-color: #EEE;
+      display: table-footer-group;
+      font-weight: bold;
+    }
+
+    .divTableBody {
+      display: table-row-group;
+    }
   </style>
 </head>
 
@@ -39,7 +108,7 @@
     </label>
     <label>
       Anzahl Strecken
-      <input id="trackCount" type="number" value="1"/>
+      <input id="trackCount" type="number" value="1" />
     </label>
   </p>
   <p>
@@ -50,60 +119,64 @@
   <h3 id="meldung"></h3>
 
   <button id="aussetzen" disabled onclick="aussetzen()">Aussetzen</button>
-  <p>
-    <img src="https://flagcdn.com/80x60/bh.png" srcset="https://flagcdn.com/160x120/bh.png 2x,
-    https://flagcdn.com/240x180/bh.png 3x" width="80" height="60" title="Bahrain">
-    <img src="https://flagcdn.com/80x60/it.png" srcset="https://flagcdn.com/160x120/it.png 2x,
-    https://flagcdn.com/240x180/it.png 3x" width="80" height="60" title="Imola">
-    <img src="https://flagcdn.com/80x60/pt.png" srcset="https://flagcdn.com/160x120/pt.png 2x,
-    https://flagcdn.com/240x180/pt.png 3x" width="80" height="60" title="Portugal">
-    <img src="https://flagcdn.com/80x60/es.png" srcset="https://flagcdn.com/160x120/es.png 2x,
-    https://flagcdn.com/240x180/es.png 3x" width="80" height="60" title="Spain">
-    <img src="https://flagcdn.com/80x60/mc.png" srcset="https://flagcdn.com/160x120/mc.png 2x,
-    https://flagcdn.com/240x180/mc.png 3x" width="80" height="60" title="Monaco">
-    <img src="https://flagcdn.com/80x60/az.png" srcset="https://flagcdn.com/160x120/az.png 2x,
-    https://flagcdn.com/240x180/az.png 3x" width="80" height="60" title="Azerbaijan">
-    <img src="https://flagcdn.com/80x60/ca.png" srcset="https://flagcdn.com/160x120/ca.png 2x,
-    https://flagcdn.com/240x180/ca.png 3x" width="80" height="60" title="Canada">
-    <img src="https://flagcdn.com/80x60/fr.png" srcset="https://flagcdn.com/160x120/fr.png 2x,
-    https://flagcdn.com/240x180/fr.png 3x" width="80" height="60" title="France">
-  </p>
-  <p>
-    <img src="https://flagcdn.com/80x60/at.png" srcset="https://flagcdn.com/160x120/at.png 2x,
-    https://flagcdn.com/240x180/at.png 3x" width="80" height="60" title="Austria">
-    <img src="https://flagcdn.com/80x60/gb.png" srcset="https://flagcdn.com/160x120/gb.png 2x,
-    https://flagcdn.com/240x180/gb.png 3x" width="80" height="60" title="Great Britain">
-    <img src="https://flagcdn.com/80x60/hu.png" srcset="https://flagcdn.com/160x120/hu.png 2x,
-    https://flagcdn.com/240x180/hu.png 3x" width="80" height="60" title="Hungary">
-    <img src="https://flagcdn.com/80x60/be.png" srcset="https://flagcdn.com/160x120/be.png 2x,
-    https://flagcdn.com/240x180/be.png 3x" width="80" height="60" title="Belgium">
-    <img src="https://flagcdn.com/80x60/nl.png" srcset="https://flagcdn.com/160x120/nl.png 2x,
-    https://flagcdn.com/240x180/nl.png 3x" width="80" height="60" title="Netherlands">
-    <img src="https://flagcdn.com/80x60/it.png" srcset="https://flagcdn.com/160x120/it.png 2x,
-    https://flagcdn.com/240x180/it.png 3x" width="80" height="60" title="Monza">
-    <img src="https://flagcdn.com/80x60/ru.png" srcset="https://flagcdn.com/160x120/ru.png 2x,
-    https://flagcdn.com/240x180/ru.png 3x" width="80" height="60" title="Russia">
-    <img src="https://flagcdn.com/80x60/sg.png" srcset="https://flagcdn.com/160x120/sg.png 2x,
-    https://flagcdn.com/240x180/sg.png 3x" width="80" height="60" title="Singapore">
-  </p>
-  <p>
-    <img src="https://flagcdn.com/80x60/jp.png" srcset="https://flagcdn.com/160x120/jp.png 2x,
-    https://flagcdn.com/240x180/jp.png 3x" width="80" height="60" title="Japan">
-    <img src="https://flagcdn.com/80x60/us.png" srcset="https://flagcdn.com/160x120/us.png 2x,
-    https://flagcdn.com/240x180/us.png 3x" width="80" height="60" title="USA">
-    <img src="https://flagcdn.com/80x60/mx.png" srcset="https://flagcdn.com/160x120/mx.png 2x,
-    https://flagcdn.com/240x180/mx.png 3x" width="80" height="60" title="Mexico">
-    <img src="https://flagcdn.com/80x60/br.png" srcset="https://flagcdn.com/160x120/br.png 2x,
-    https://flagcdn.com/240x180/br.png 3x" width="80" height="60" title="Brasil">
-    <img src="https://flagcdn.com/80x60/au.png" srcset="https://flagcdn.com/160x120/au.png 2x,
-    https://flagcdn.com/240x180/au.png 3x" width="80" height="60" title="Australia">
-    <img src="https://flagcdn.com/80x60/sa.png" srcset="https://flagcdn.com/160x120/sa.png 2x,
-    https://flagcdn.com/240x180/sa.png 3x" width="80" height="60" title="Saudi Arabia">
-    <img src="https://flagcdn.com/80x60/ae.png" srcset="https://flagcdn.com/160x120/ae.png 2x,
-    https://flagcdn.com/240x180/ae.png 3x" width="80" height="60" title="Abu Dhabi">
-    <img src="https://flagcdn.com/80x60/cn.png" srcset="https://flagcdn.com/160x120/cn.png 2x,
-    https://flagcdn.com/240x180/cn.png 3x" width="80" height="60" title="China">
-  </p>
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell"> <img src="https://flagcdn.com/80x60/bh.png" srcset="https://flagcdn.com/160x120/bh.png 2x,
+      https://flagcdn.com/240x180/bh.png 3x" width="80" height="60" title="Bahrain"><span class="track-label">Bahrain</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/it.png" srcset="https://flagcdn.com/160x120/it.png 2x,
+      https://flagcdn.com/240x180/it.png 3x" width="80" height="60" title="Imola"><span class="track-label">Imola</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/pt.png" srcset="https://flagcdn.com/160x120/pt.png 2x,
+      https://flagcdn.com/240x180/pt.png 3x" width="80" height="60" title="Portugal"><span class="track-label">Portugal</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/es.png" srcset="https://flagcdn.com/160x120/es.png 2x,
+      https://flagcdn.com/240x180/es.png 3x" width="80" height="60" title="Spain"><span class="track-label">Spain</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/mc.png" srcset="https://flagcdn.com/160x120/mc.png 2x,
+      https://flagcdn.com/240x180/mc.png 3x" width="80" height="60" title="Monaco"><span class="track-label">Monaco</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/az.png" srcset="https://flagcdn.com/160x120/az.png 2x,
+      https://flagcdn.com/240x180/az.png 3x" width="80" height="60" title="Azerbaijan"><span class="track-label">Azerbaijan</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/ca.png" srcset="https://flagcdn.com/160x120/ca.png 2x,
+      https://flagcdn.com/240x180/ca.png 3x" width="80" height="60" title="Canada"><span class="track-label">Canada</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/fr.png" srcset="https://flagcdn.com/160x120/fr.png 2x,
+      https://flagcdn.com/240x180/fr.png 3x" width="80" height="60" title="France"><span class="track-label">France</span></div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/at.png" srcset="https://flagcdn.com/160x120/at.png 2x,
+      https://flagcdn.com/240x180/at.png 3x" width="80" height="60" title="Austria"><span class="track-label">Austria</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/gb.png" srcset="https://flagcdn.com/160x120/gb.png 2x,
+      https://flagcdn.com/240x180/gb.png 3x" width="80" height="60" title="Great Britain"><span class="track-label">Great Britain</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/hu.png" srcset="https://flagcdn.com/160x120/hu.png 2x,
+      https://flagcdn.com/240x180/hu.png 3x" width="80" height="60" title="Hungary"><span class="track-label">Hungary</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/be.png" srcset="https://flagcdn.com/160x120/be.png 2x,
+      https://flagcdn.com/240x180/be.png 3x" width="80" height="60" title="Belgium"><span class="track-label">Belgium</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/nl.png" srcset="https://flagcdn.com/160x120/nl.png 2x,
+      https://flagcdn.com/240x180/nl.png 3x" width="80" height="60" title="Netherlands"><span class="track-label">Netherlands</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/it.png" srcset="https://flagcdn.com/160x120/it.png 2x,
+      https://flagcdn.com/240x180/it.png 3x" width="80" height="60" title="Monza"><span class="track-label">Monza</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/ru.png" srcset="https://flagcdn.com/160x120/ru.png 2x,
+      https://flagcdn.com/240x180/ru.png 3x" width="80" height="60" title="Russia"><span class="track-label">Russia</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/sg.png" srcset="https://flagcdn.com/160x120/sg.png 2x,
+      https://flagcdn.com/240x180/sg.png 3x" width="80" height="60" title="Singapore"><span class="track-label">Singapore</span></div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/jp.png" srcset="https://flagcdn.com/160x120/jp.png 2x,
+      https://flagcdn.com/240x180/jp.png 3x" width="80" height="60" title="Japan"><span class="track-label">Japan</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/us.png" srcset="https://flagcdn.com/160x120/us.png 2x,
+      https://flagcdn.com/240x180/us.png 3x" width="80" height="60" title="USA"><span class="track-label">USA</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/mx.png" srcset="https://flagcdn.com/160x120/mx.png 2x,
+      https://flagcdn.com/240x180/mx.png 3x" width="80" height="60" title="Mexico"><span class="track-label">Mexico</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/br.png" srcset="https://flagcdn.com/160x120/br.png 2x,
+      https://flagcdn.com/240x180/br.png 3x" width="80" height="60" title="Brasil"><span class="track-label">Brasil</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/au.png" srcset="https://flagcdn.com/160x120/au.png 2x,
+      https://flagcdn.com/240x180/au.png 3x" width="80" height="60" title="Australia"><span class="track-label">Australia</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/sa.png" srcset="https://flagcdn.com/160x120/sa.png 2x,
+      https://flagcdn.com/240x180/sa.png 3x" width="80" height="60" title="Saudi Arabia"><span class="track-label">Saudi Arabia</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/ae.png" srcset="https://flagcdn.com/160x120/ae.png 2x,
+      https://flagcdn.com/240x180/ae.png 3x" width="80" height="60" title="Abu Dhabi"><span class="track-label">Abu Dhabi</span></div>
+        <div class="divTableCell"><img src="https://flagcdn.com/80x60/cn.png" srcset="https://flagcdn.com/160x120/cn.png 2x,
+      https://flagcdn.com/240x180/cn.png 3x" width="80" height="60" title="China"><span class="track-label">China</span></div>
+      </div>
+    </div>
+  </div>
   <button id="ziehen" onclick="startDraw()" disabled>Ziehung starten</button>
   <p id="draws">
 

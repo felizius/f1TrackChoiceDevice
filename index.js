@@ -34,6 +34,9 @@ function ban(e) {
     if(state != 1) {
         return;
     }
+    if(!(tracks.filter(x => x == e.target.title).length)) {
+        return;
+    }
     console.log(e);
     $('img[title=\'' + e.target.title + '\']').addClass('grey');
     tracks = tracks.filter(x => x != e.target.title);
