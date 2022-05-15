@@ -24,7 +24,7 @@ function start() {
     localStorage.setItem('players', players);
     players = players.split('\n');
     shuffle(players);
-    $('#meldung').text(players[playerIndex] + " ist an der Reihe. Bitte eine Karte bannen oder aussetzen");
+    $('#meldung').text(players[playerIndex] + " ist an der Reihe. Bitte eine Strecke bannen oder aussetzen");
     $('#aussetzen').prop('disabled', false);
 }
 
@@ -50,7 +50,7 @@ function ban(e) {
     } else {
         playerIndex++;
     }
-    $('#meldung').text(players[playerIndex] + " ist an der Reihe. BiBitte eine Karte bannen oder aussetzen");
+    $('#meldung').text(players[playerIndex] + " ist an der Reihe. Bitte eine Strecke bannen oder aussetzen");
 }
 
 function aussetzen() {
