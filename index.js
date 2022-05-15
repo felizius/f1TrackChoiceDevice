@@ -70,6 +70,7 @@ function aussetzen() {
 }
 
 function startDraw() {
+    $('#ziehen').prop('disabled', true);
     state = 2;
     for(let h = 0; h < +$('#trackCount').val(); h++) {
         $('#draws').append('<span>Strecke ' + (h+1) + '</span><h3 id="h' + h + '"></h3>');
