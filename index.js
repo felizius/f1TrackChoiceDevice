@@ -31,6 +31,7 @@ function start() {
 $('#start').click(start);
 
 function ban(e) {
+    aussetzCounter = 0;
     if(state != 1) {
         return;
     }
