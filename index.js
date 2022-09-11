@@ -47,6 +47,7 @@ function ban(e) {
         $('#ziehen').prop('disabled', false);
         $('#meldung').text('Die Ziehung kann gestartet werden');
         $('#aussetzen').prop('disabled', true);
+        $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
         return;
     }
     if(playerIndex == players.length - 1) {
@@ -70,6 +71,7 @@ function aussetzen() {
         $('#ziehen').prop('disabled', false);
         $('#meldung').text('Die Ziehung kann gestartet werden');
         $('#aussetzen').prop('disabled', true);
+        $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
     }
 }
 
