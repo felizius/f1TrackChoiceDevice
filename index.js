@@ -89,6 +89,7 @@ function startDraw() {
         let result = tracks[Math.floor(Math.random() * tracks.length)];
         tracks = tracks.filter(x => x != result);
         setTimeout(() => {$('#h' + h).text(result)},time + 50);
+        $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
     }
 }
 
